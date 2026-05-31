@@ -26,3 +26,91 @@ body {
 .navbar-nav li {
     margin-left: 20px;      
 }
+.navbar-nav a:hover {
+    text-decoration: underline;
+}
+.logout a {
+    font-weight: bold;
+}
+.sedi-nav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #163d5c;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+}
+.sedi-nav a {
+    padding: 12px 25px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+}
+.sedi-nav a:hover {
+    background-color: #285b86;
+}
+.btn-close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+}
+.container {
+    width : 700px;
+    margin: 40px auto;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding : 40px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.container h2 {
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 25px;
+}
+.container p {
+    text-align: center;
+}
+hr {
+    border: 0;
+    border-top: 1px solid #ddd;
+    margin-bottom: 30px;
+}
+.submit {
+    width: 100%;
+    padding: 10px;
+    background-color: #1f4e79;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+.submit:hover {
+    background-color: #163d5c;
+}
+.tambah {
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: white;
+}
+th {
+    background-color: #1f4e79;
+    color: white;
+}
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
