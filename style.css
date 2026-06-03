@@ -37,6 +37,12 @@ body {
 .logout a {
     font-weight: bold;
 }
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
 .side-nav {
     height: 100%;
     width: 0;
