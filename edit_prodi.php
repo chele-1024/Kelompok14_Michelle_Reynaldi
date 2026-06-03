@@ -19,10 +19,13 @@
 
 <!-- Form dengan value terisi data lama -->
 <form method="POST">
+    <div class="container">
+    <h2>Edit Data Prodi</h2>
     <label>Kode Prodi</label>
     <input type="text" name="kd_prodi" value="<?php echo $data['kd_prodi']; ?>" required>
     <label>Nama Prodi</label><br>
     <input type="text" name="nama_prodi" value="<?php echo $data['nama_prodi']; ?>" required>
     <button type="submit" name="update" class="submit">Update</button>
     <a href="prodi.php" class="batal">BATAL</a>
+    </div>
 </form>

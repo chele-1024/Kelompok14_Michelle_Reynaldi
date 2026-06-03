@@ -26,13 +26,18 @@ body {
 .navbar-nav li {
     margin-left: 20px;      
 }
+.navbar-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
 .navbar-nav a:hover {
     text-decoration: underline;
 }
 .logout a {
     font-weight: bold;
 }
-.sedi-nav {
+.side-nav {
     height: 100%;
     width: 0;
     position: fixed;
@@ -44,14 +49,14 @@ body {
     transition: 0.3s;
     padding-top: 60px;
 }
-.sedi-nav a {
+.side-nav a {
     padding: 12px 25px;
     text-decoration: none;
     font-size: 18px;
     color: white;
     display: block;
 }
-.sedi-nav a:hover {
+.side-nav a:hover {
     background-color: #285b86;
 }
 .btn-close {
@@ -61,7 +66,8 @@ body {
     font-size: 30px;
 }
 .container {
-    width : 700px;
+    width : 1000px;
+    max-width: 95%;
     margin: 40px auto;
     background-color: white;
     border: 1px solid #ccc;
@@ -94,12 +100,17 @@ hr {
     background-color: #163d5c;
 }
 .tambah {
+    display: inline-block;
     background-color: #4caf50;
     border: none;
     color: white;
-    padding: 10px 20px;
+    padding: 10px 18px;
     font-size: 14px;
     cursor: pointer;
+    margin-bottom: 15px;
+}
+.tambah:hover {
+    background-color: #3f9442;
 }
 table {
     border-collapse: collapse;
@@ -111,6 +122,77 @@ th {
     color: white;
 }
 th, td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+tr:hover {
+    background-color: #e8f1ff;
+}
+th, td {
     padding: 10px;
     border-bottom: 1px solid #ddd;
 }
+th:last-child,
+td:last-child {
+    width: 150px;
+}
+.btn-edit,
+.btn-delete {
+    display: inline-block;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: white;
+}
+.btn-edit {
+    background-color: #2196f3;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-right: 5px;
+}
+.btn-edit:hover {
+  background-color: #0f2b4d;
+}
+.btn-delete {
+    background-color: #f44336;
+    color: white;
+    cursor: pointer;
+    margin-left: 1px;
+    text-align: center;
+}
+td img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+.form-container {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.form-group label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.form-group input[type="text"],
+.form-group select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.radio-group {
+  display: flex;
+  gap: 20px;
+}
+
+

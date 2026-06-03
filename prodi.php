@@ -1,12 +1,17 @@
 <?php
     session_start();
     header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
-    if (!isset($_SESSION['login']) || $_SESSION['login'] !== true) {
+    if (!isset($_SESSION['login']) || $_SESSION['login'] != true) {
         header("location:index.php?p=Silahkan Login Terlebih Dahulu");
         exit();
     }
     include "koneksi.php";
+    $cari = isset($_GET['cari']) ? $_GET['cari'] : '';
+    if ($cari != '') {
+        $data = mysqli_query($koneksi, "SELECT * FROM prodi WHERE kd_prodi LIKE '%$cari%' OR nama_prodi LIKE '%$cari%'");
+    } else {
     $data = mysqli_query($koneksi, "SELECT * FROM prodi");
+    }
 ?>
 
 <!DOCTYPE html>
@@ -35,9 +40,9 @@
                         <td><?php echo $row['kd_prodi']; ?></td>
                         <td><?php echo $row['nama_prodi']; ?></td>
                         <td>
-                            <a href="edit_prodi.php?id_prodi=<?php echo $row['id_prodi']; ?>">Edit</a>
+                            <a href="edit_prodi.php?id_prodi=<?php echo $row['id_prodi']; ?>" class= "btn-edit">Edit</a>
                             <a href="hapus_prodi.php?id_prodi=<?php echo $row['id_prodi']; ?>" 
-                            onclick="return confirm('Yakin ingin hapus?')">DELETE</a>
+                            onclick="return confirm('Yakin ingin hapus?')" class = "btn-delete">DELETE</a>
                         </td>
                     </tr>
                     <?php } ?>
